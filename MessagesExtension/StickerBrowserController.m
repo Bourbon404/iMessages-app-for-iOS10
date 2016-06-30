@@ -16,7 +16,7 @@
 -(MSSticker *)stickerBrowserView:(MSStickerBrowserView *)stickerBrowserView stickerAtIndex:(NSInteger)index
 {
 
-    NSURL *fileURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"info" ofType:@"plist"]];
+    NSURL *fileURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"1" ofType:@"png"]];
     MSSticker *ticker = [[MSSticker alloc] initWithContentsOfFileURL:fileURL localizedDescription:@"文本" error:nil];
     
     return ticker;

@@ -17,6 +17,15 @@
                     <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21T-05-98E">
+                                <frame key="frameInset" minX="16" height="158" maxX="16" maxY="342"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="BSB-n3-T3t" kind="embed" id="dfi-CS-wRt"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -24,7 +33,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-594" y="-152"/>
+            <point key="canvasLocation" x="-595.20000000000005" y="-152.02398800599701"/>
+        </scene>
+        <!--Sticker Browser Controller-->
+        <scene sceneID="axe-ax-lw3">
+            <objects>
+                <viewController id="BSB-n3-T3t" customClass="StickerBrowserController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ct3-ec-sv5">
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="158"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TWz-Dx-Mza" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="-152"/>
         </scene>
     </scenes>
 </document>

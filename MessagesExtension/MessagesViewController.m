@@ -8,7 +8,7 @@
 
 #import "MessagesViewController.h"
 
-
+#import "StickerBrowserController.h"
 @interface MessagesViewController ()
 
 @end
@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    return;
     for (int i = 0; i < 4; i++) {
         UIButton *button = [UIButton buttonWithType:(UIButtonTypeContactAdd)];
         [button setTag:i];
