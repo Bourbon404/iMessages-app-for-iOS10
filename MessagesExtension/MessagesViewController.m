@@ -7,8 +7,8 @@
 //
 
 #import "MessagesViewController.h"
-
 #import "StickerBrowserController.h"
+#import <UIKit/UIKit.h>
 @interface MessagesViewController ()
 
 @end
@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    return;
+    
     for (int i = 0; i < 4; i++) {
         UIButton *button = [UIButton buttonWithType:(UIButtonTypeContactAdd)];
         [button setTag:i];
@@ -28,6 +28,8 @@
     }
     [self addObserver:self forKeyPath:@"activeConversation" options:(NSKeyValueObservingOptionNew) context:nil];
 
+    
+    
 }
 -(void)dealloc
 {
@@ -41,7 +43,13 @@
 {
     if (button.tag == 0) {
         [self.activeConversation insertText:@"发送内容" completionHandler:^(NSError * _Nullable error) {
-            
+            UIResponder *responder = self;
+            while ((responder = responder.nextResponder) != nil) {
+                if ([responder respondsToSelector:@selector(openURL:)]) {
+                    [responder performSelector:@selector(openURL:) withObject:[NSURL URLWithString:@"http://www.baidu.com"]];
+                }
+            }
+
         }];
     }else if (button.tag == 1){
         NSURL *fileURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"1" ofType:@"png"]];
@@ -119,6 +127,7 @@
     // Called before the extension transitions to a new presentation style.
     
     // Use this method to prepare for the change in presentation style.
+    
 }
 
 -(void)didTransitionToPresentationStyle:(MSMessagesAppPresentationStyle)presentationStyle {

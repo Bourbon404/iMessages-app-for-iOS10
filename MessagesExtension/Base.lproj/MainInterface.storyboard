@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,15 +19,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21T-05-98E">
-                                <frame key="frameInset" minX="16" height="158" maxX="16" maxY="342"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21T-05-98E">
                                 <connections>
                                     <segue destination="BSB-n3-T3t" kind="embed" id="dfi-CS-wRt"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="21T-05-98E" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="Fgg-gY-BcT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="21T-05-98E" secondAttribute="trailing" id="JDQ-5H-06v"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="21T-05-98E" secondAttribute="leading" id="W5f-NO-DtW"/>
+                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="21T-05-98E" secondAttribute="bottom" constant="8" id="dmx-NB-XNp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="21T-05-98E" secondAttribute="trailing" id="w3w-cl-YoP"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="528"/>
@@ -39,8 +45,12 @@
         <scene sceneID="axe-ax-lw3">
             <objects>
                 <viewController id="BSB-n3-T3t" customClass="StickerBrowserController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VsX-yr-X7z"/>
+                        <viewControllerLayoutGuide type="bottom" id="SWh-X7-m0O"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ct3-ec-sv5">
-                        <rect key="frame" x="0.0" y="0.0" width="288" height="158"/>
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
